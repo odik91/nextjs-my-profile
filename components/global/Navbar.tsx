@@ -17,7 +17,7 @@ const Navbar = ({ page }: PageProps) => {
   };
 
   return (
-    <nav className={`${page !== 'home' ? 'sticky top-0 z-50' : ''}`}>
+    <nav className={`${page !== 'home' ? 'sticky top-0 z-50 bg-gray-100 bg-opacity-80' : ''}`}>
       <div className="container px-[15px] py-3 md:flex justify-evenly shadow-gray-200 shadow-md">
         <div className="flex md:hidden justify-end items-center px-4 py-2">
           <Button

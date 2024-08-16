@@ -1,9 +1,8 @@
 "use client";
-import { useEffect, useRef, useState } from "react";
+import useIntersectionObserver from "@/hooks/useIntersectionObserver";
 import MyExpertises from "./MyExpertises";
 import PersonalInfo from "./PersonalInfo";
 import WhoAmI from "./WhoAmI";
-import useIntersectionObserver from "@/hooks/useIntersectionObserver";
 
 const Intro = () => {
   const {isVisible, elementRef} = useIntersectionObserver(0.1, false)

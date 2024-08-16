@@ -32,9 +32,9 @@ const HeroContent = () => {
       >
         {skills.map((skill, index) => {          
           if (index == skills.length - 1) {
-            return <>{skill}</>
+            return <span key={index}>{skill}</span>
           }
-          return <>{skill} | </>
+          return <span key={index}>{skill} | </span>
         })}
       </h6>
       <MainLinkButton linkCv={linkCv} />
