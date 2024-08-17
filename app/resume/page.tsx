@@ -2,9 +2,7 @@
 import Footer from "@/components/global/Footer";
 import GlobalHero from "@/components/global/GlobalHero";
 import Navbar from "@/components/global/Navbar";
-import SingleWordUnderline from "@/components/global/SingleWordUnderline";
 import CardInfo from "@/components/resume/CardInfo";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import bg from "@/public/images/bg-resume.png";
 
 const ResumePage = () => {
