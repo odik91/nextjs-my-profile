@@ -114,12 +114,12 @@ const ResumePage = () => {
       <Navbar page="other" />
       <GlobalHero background={bg.src} title="Resume" />
       <div className="px-5 my-6">
-        <div className="container grid grid-cols-3 gap-5">
+        <div className="container grid grid-cols-1 md:grid-cols-3 gap-5">
           <CardInfo title="Work Experience" type="content" data={workExperiences} />
           <CardInfo title="Educations" type="content" data={educations} />
           <CardInfo title="Certifications" type="content" data={certifications} />
           <CardInfo title="Skills" type="skill" data={skills} />
-          <CardInfo title="Skills" type="skill" data={languages} />
+          <CardInfo title="Languages" type="skill" data={languages} />
         </div>
       </div>
       <Footer />
