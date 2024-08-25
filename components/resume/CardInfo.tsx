@@ -22,7 +22,7 @@ const CardInfo = ({
   type: typeContentProp;
   data: DataProps[];
 }) => {
-  const {isVisible, elementRef} = useIntersectionObserver(0.1, false)
+  const {isVisible, elementRef} = useIntersectionObserver(0.1, true)
   return (
     <Card className={`shadow-md shadow-gray-300 transition-all duration-1000 ease-in-out delay-75 ${
         isVisible ? "opacity-100 scale-100" : "opacity-0 scale-0"
