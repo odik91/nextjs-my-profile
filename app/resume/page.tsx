@@ -111,6 +111,11 @@ const ResumePage = () => {
     <main>
       <Navbar page="other" />
       <GlobalHero background={bg.src} title="Resume" />
+      <section className="w-full h-32 min-h-10 bg-gray-700 align-middle flex justify-center items-center">
+        <h1 className="text-gray-300 font-medium text-3xl">
+          Please Scroll Down
+        </h1>
+      </section>
       <div className="px-5 my-6">
         <div className="container grid grid-cols-1 md:grid-cols-3 gap-5">
           <CardInfo title="Work Experience" type="content" data={workExperiences} />
