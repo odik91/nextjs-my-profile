@@ -113,7 +113,7 @@ const PortfolioPage = () => {
                   </h1>
                   <p className="text-sm text-gray-700">{description}</p>
                   <Separator className="mt-4" />
-                  <div className="grid grid-cols-3 gap-3 mt-3">
+                  <div className="grid md:grid-cols-3 gap-3 mt-3">
                     {title === "all" ? (
                       listPortfolios.map((item, i) => {
                         const { category, title: subtitle, image, description, link } =
