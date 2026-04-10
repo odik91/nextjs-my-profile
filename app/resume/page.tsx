@@ -8,12 +8,17 @@ import bg from "@/public/images/bg-resume.png";
 const ResumePage = () => {
   const workExperiences = [
     {
-      header: "Desc 2022 - March 2024",
+      header: "Jan 2025 - July 2025",
+      subHeader: "Fullstack Web Developer at PT. HANSWAY INDONESIA",
+      description: "Responsible to analyze, design, and develop web applications.",
+    },
+    {
+      header: "December 2022 - March 2024",
       subHeader: "Fullstack Web Developer at PT. Graha Kreasi Solusindo",
       description: "Responsible to build, maintenance and deploy web aplication.",
     },
     {
-      header: "May 2018 - Sept 2022",
+      header: "May 2018 - September 2022",
       subHeader: "Graphic Designer & Operator Outdoor Printer at Syscom Printing Batam",
       description: "Responsible to design and print banners, books, leaflet, brochure, book cover, id card, name card, etc.",
     },
@@ -21,22 +26,22 @@ const ResumePage = () => {
 
   const educations = [
     {
-      header: "Sept 2018 - Sept 2022",
+      header: "September 2018 - September 2022",
       subHeader: "Batam University (Graduate With GPA 3.84)",
       description: "Sistem Informasi (Bachelor Degree) Major: Analyze system, web developer, sistem management, accpunting information system, healthcare system information, etc.",
     },
     {
-      header: "Feb 2022 - Jul 2022",
+      header: "February 2022 - July 2022",
       subHeader: "Bangkit Academy (Graduate)",
       description: "(Cloud Computing Learning Path). MSIB Kemendikbud Bangkit Academy 2022 by Google, GoTo, Traveloka - Cloud Computing Learning Path in major program Cloud Computing with Google Cloud Platform for analyze and solution infrastructure needed.",
     },
     {
-      header: "Sept 2005 - Sept 2008",
+      header: "September 2005 - September 2008",
       subHeader: "UNISA (Partial Graduate)",
       description: "Nurse (Bachelor Degree)",
     },
     {
-      header: "Jul 2005 - Jul 2008",
+      header: "July 2005 - July 2008",
       subHeader: "SMA N 2 KUNDUR (Graduate)",
       description: "Program Studi IPA",
     },
