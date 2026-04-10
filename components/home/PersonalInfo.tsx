@@ -7,9 +7,9 @@ const PersonalInfo = () => {
       <h3 className="text-3xl">Personal Info</h3>
       <SingleWordUnderline />
       <ul className="block text-gray-700">
-        <li className="pb-2 box-border text-sm">
+        {/* <li className="pb-2 box-border text-sm">
           <span className="font-bold">Birth date</span>: 1991/01/17
-        </li>
+        </li> */}
         <li className="pb-2 box-border text-sm">
           <span className="font-bold">Email</span>: ali.shoddiqien@gmail.com
         </li>
