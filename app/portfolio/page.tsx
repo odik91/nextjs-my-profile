@@ -16,8 +16,20 @@ import portfolio1 from "@/public/images/portfolio1.png";
 import portfolio2 from "@/public/images/portfolio2.png";
 import portfolio3 from "@/public/images/portfolio3.png";
 import portfolio4 from "@/public/images/portfolio4.png";
+import portfolio5 from "@/public/images/npm-gant.png";
+import portfolio6 from "@/public/images/portfolio6.png";
+import portfolio7 from "@/public/images/portfolio7.png";
+import { link } from "fs";
 import Image from "next/image";
 import { Fragment } from "react";
+
+type ListPortfolios = {
+    category: string;
+    title: string;
+    image: string;
+    description: string;
+    link?: string;
+}
 
 const PortfolioPage = () => {
   const categories = [
@@ -43,14 +55,38 @@ const PortfolioPage = () => {
     },
   ];
 
-  const listPortfolios = [
+  const listPortfolios: ListPortfolios[] = [
+    {
+      category: "etc",
+      title: "Gantt Task React (NPM Package - Rebuild with New Features)",
+      image: portfolio5.src,
+      description:
+        "A highly customizable and interactive Gantt chart component for React with TypeScript support. This repository integrates features and enhancements from the original MaTeMaTuK/gantt-task-react , the ObeoNetwork/gantt-task-react fork, and our current development, creating a comprehensive solution for managing Gantt charts.",
+      link: "https://gantt-chart-docs.vercel.app/",
+    },
+    {
+      category: "web",
+      title: "Act Strive",
+      image: portfolio7.src,
+      description:
+        "Act Strive is an ERP enterprise web application designed to manage all aspects of manufacturing business operations. It is a private personal project, and I can provide a link upon request. The website is built using Node.js, React.js, Tailwind CSS, and TypeScript. If you need more information or have specific questions, feel free to ask!",
+      // link: "https://tech-wave-testdev.vercel.app/",
+    },
+    {
+      category: "web",
+      title: "Tech Wave",
+      image: portfolio6.src,
+      description:
+        "Web company profile for a technology company. This website was built using Next JS, Tailwind CSS, and TypeScript. This website is still in development, but you can see the demo link below.",
+      link: "https://tech-wave-testdev.vercel.app/",
+    },
     {
       category: "web",
       title: "Content Management System (CMS) for Blog",
       image: portfolio1.src,
       description:
         "The tools used to create this project are PHP, Laravel 8, MySQL, and NGINX. This web application was developed to control the website's content, including news, blogs, and other types.",
-      link: "/",
+      // link: "/",
     },
     {
       category: "web",
@@ -58,7 +94,7 @@ const PortfolioPage = () => {
       image: portfolio2.src,
       description:
         "This application was created with PHP Laravel, MySQL, and NGINX. This app was created for a college final assignment. This app searches for pharmacies, medications, and medical gadgets in the Riau Islands.",
-      link: "/",
+      // link: "/",
     },
     {
       category: "web",
@@ -66,7 +102,7 @@ const PortfolioPage = () => {
       image: portfolio3.src,
       description:
         "Cookieshare is an example of a simple social networking front-end design. This website was built using html5, bootstrap 4, custom CSS3, and javascript.",
-      link: "/",
+      // link: "/",
     },
     {
       category: "web",
@@ -74,15 +110,7 @@ const PortfolioPage = () => {
       image: portfolio4.src,
       description:
         "This web application was created with procedural PHP and is an old practice file for understanding the use of CRUD for blog management.",
-      link: "/",
-    },
-    {
-      category: "mobile",
-      title: "test",
-      image: portfolio4.src,
-      description:
-        "This web application was created with procedural PHP and is an old practice file for understanding the use of CRUD for blog management.",
-      link: "/",
+      // link: "/",
     },
   ];
 
@@ -143,12 +171,16 @@ const PortfolioPage = () => {
                               <div className="text-center mb-4">
                                 {description}
                               </div>
-                              <div className="text-center mb-4">
-                                <StandartLinkButton
-                                  link={link}
-                                  text="Read more..."
-                                />
-                              </div>
+                              {
+                                link && (
+                                <div className="text-center mb-4">
+                                  <StandartLinkButton
+                                    link={link}
+                                    text="Read more..."
+                                  />
+                                </div>
+                                )
+                              }
                             </CardContent>
                           </Card>
                         );
@@ -176,9 +208,17 @@ const PortfolioPage = () => {
                                 />
                               </div>
                               <div className="text-center mb-4">{item.description}</div>
-                              <div className="text-center mb-4">
-                                <StandartLinkButton link={item.link} text="Read more..." />
-                              </div>
+
+                              {
+                                item.link && (
+                                  <div className="text-center mb-4">
+                                    <StandartLinkButton
+                                      link={item.link}
+                                      text="Read more..."
+                                    />
+                                  </div>
+                                )
+                              }
                             </CardContent>
                           </Card>
                         ))
